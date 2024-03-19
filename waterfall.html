@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterfall Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .waterfall {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRntBxmpoCidQGZJQRGMX7m2NrBWvCSK1V997HMQ7YfSQ&s'); /* 폭포 이미지 URL을 여기에 입력하세요 */
+            background-size: cover;
+            position: relative;
+        }
+
+        .waterfall:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, rgb(167 230 255 / 0%) 0%, rgb(190 255 250) 100%);
+    animation: waterfallAnimation 2s infinite;
+}
+        @keyframes waterfallAnimation {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="waterfall"></div>
+</body>
+</html>

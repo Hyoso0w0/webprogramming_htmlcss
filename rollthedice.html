@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        body {
+     font-family: Arial, sans-serif;
+     background-color: #afffff;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+      }
+
+        #dice-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .dice {
+        font-size: 3em;
+        margin: 0 10px;
+        width: 80px;
+        height: 80px;
+        border: 2px solid #ff6d6d;
+        border-radius: 50%;
+        background-color: #e9ff70;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         }
+
+        #result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+         padding: 10px 20px;
+         font-size: 1.2em;
+         border: none;
+         border-radius: 5px;
+         background-color: #63397f;
+         color: #fff;
+         cursor: pointer;
+         transition: background-color 0.3s;
+         }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="dice-container">
+        <div class="dice" id="dice1">?</div>
+        <div class="dice" id="dice2">?</div>
+    </div>
+    <button onclick="rollDice()">Roll Dice</button>
+    <p id="result"></p>
+
+    <script>
+        function rollDice() {
+            var dice1 = Math.floor(Math.random() * 6) + 1;
+            var dice2 = Math.floor(Math.random() * 6) + 1;
+
+            document.getElementById("dice1").innerText = dice1;
+            document.getElementById("dice2").innerText = dice2;
+
+            var total = dice1 + dice2;
+            document.getElementById("result").innerText = "Total: " + total;
+        }
+    </script>
+</body>
+</html>
+
+
