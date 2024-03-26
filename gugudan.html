@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>gugudan</title>
+</head>
+<body>
+    <button id="two">2</button>
+    <button id="three">3</button>
+ <button id="four">4</button>
+ <button id="five">5</button>
+ <button id="six">6</button>
+ <button id="seven">7</button>
+ <button id="eight">8</button>
+ <button id="nine">9</button>
+
+ <div id="output"></div>
+ <script> 
+ let twoButton = document.getElementById("two");
+ let threeButton = document.getElementById("three");
+ let fourButton = document.getElementById("four");
+ let fiveButton = document.getElementById("five");
+ let sixButton = document.getElementById("six");
+ let sevenButton = document.getElementById("seven");
+ let eightButton = document.getElementById("eight");
+ let nineButton = document.getElementById("nine");
+
+ let outputDiv = document.getElementById("output");
+
+ twoButton.addEventListener("click", function () {
+            printGugudan(2);
+        });
+
+        threeButton.addEventListener("click", function () {
+            printGugudan(3);
+        });
+
+        fourButton.addEventListener("click", function () {
+            printGugudan(4);
+        });
+
+        fiveButton.addEventListener("click", function () {
+            printGugudan(5);
+        });
+
+        sixButton.addEventListener("click", function () {
+            printGugudan(6);
+        });
+
+        sevenButton.addEventListener("click", function () {
+            printGugudan(7);
+        });
+
+        eightButton.addEventListener("click", function () {
+            printGugudan(8);
+        });
+
+        nineButton.addEventListener("click", function () {
+            printGugudan(9);
+        });
+
+        function printGugudan(number) {
+            let result = '';
+            for (let i = 1; i < 10; i++) {
+                result += number + ' * ' + i + ' = ' + (number * i) + '<br>';
+            }
+            outputDiv.innerHTML = result;
+        }
+ </script> 
+</body>
+
